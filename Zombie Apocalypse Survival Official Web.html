@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Apocalypse Survival</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Dodane style */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <heder>
+        <h1>Zombie Apocalypse Survival<h1>
+    </heder>
+    <nav>
+        <a herf="#" onclick="showSection('Informacje')">Informacje</a>
+        <a href="#" onclick="showSection('Aktualnosci')">Aktualnosci</a>
+        <a href="#" onclick="showSection('Pobierz')">Pobierz</a>
+        <a herf="#" onclick="showSection('Kontakt')">Kontakt</a>
+        <a href="#" onclick="showSection('Update')">Update</a>
+    </nav>
+
+    <section id="Informacje">
+        <h2>Informacje</h2>
+        <p>Gra tworzona od 10 marca 2024 przez jedengo developera Pokebola</p>
+        <p>Inspiracją była chęć zrobienia własnej gry i jej upublikowania</p>
+        <a href="https://www.youtube.com/channel/UCn_Wl_33UqCZVnbrX0B3X8A">Kanał YouTube</a>
+    </section>
+    <footer>
+        &copy; Strona utworzona 13 marca 2024 
+    </footer>
+
+    <section id="Aktualnosci" class="hidden">
+        <h2>Aktualnosci</h2>
+        <p>Gra jest tworzona na silniku Unity w 3D</p>
+        <p>Tutaj będą się pojawać informacje dotyczące gry</p>
+        <a href="#" onclick="14_03_2024">14.03.2023</a>
+    </section>
+
+    <section id="14_03_2024" class="hidden">
+        <h6>13.03.2024</h6>
+        <p>Dodanie cyklu dnia i nocy</p>
+        <p>Dodanie ewipunku</p>
+        <p>Nowe przyciski w menu</p>
+    </section>
+
+    <section id="Pobierz" class="hidden">
+        <h3>Pobierz</h3>
+        <p>Tudaj znajdziesz link do pobrania gry</p>
+        <p>Ale niestety gra jest jeszcze niedostępna poczekaj do premiery gry</p>
+    </section>
+
+    <section id="Kontakt" class="hidden">
+        <h4>Kontakt</h4>
+        <p>Masz jakiś pomysł jaki bym mogł dodać do gry?</p>
+        <p>A może zauważyłeś błąd?</p>
+        <p>Napisz do mnie na mail</p>
+        <p>devpokebol@gmail.com</p>
+    </section>
+
+    <section id="Update" class="hidden">
+        <h5>Update</h5>
+            <p>Tudaj się będą znajdować informacje co nowego w update</p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
